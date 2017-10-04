@@ -31,6 +31,10 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+<p>Number of unique products: <%= @products.count %></p>
+<p>Average Price of Products is: <%= @products.average(:price) %></p>
+<p>Sum of the quantity of all items: <%= @products.sum(:stock_quantity) %></p>
 <% 100.times do %> 
 	<p>Chunky Bacon</p>
 <% end %>
